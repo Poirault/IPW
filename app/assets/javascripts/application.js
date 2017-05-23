@@ -17,8 +17,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
 /*
+
 $(document).ready(function() {
 
 	particlesJS("particles-js", {
@@ -175,4 +175,5 @@ $(document).ready(function() {
 		$('.overflow-y').css("overflow-x", "hidden");
 		$('.overflow-y').css("overflow-y", "hidden");
 	}
-});*/
+});
+*/

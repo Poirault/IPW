@@ -38,7 +38,7 @@ class Validation::UsersController < ApplicationController
         if @user.save
             flash[:notice] = 'Etudiant ajouté avec succès'
             # Tell the UserMailer to send a welcome email after save
-            UserMailer.invitation_email(@user).deliver_now
+            UserMailer.invitation_email(@user.email).deliver_now
             redirect_to validation_users_path
         end
     end
