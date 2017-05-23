@@ -1,0 +1,40 @@
+<div class="space_top-small">
+  <h2 class="margin-bot_none">Modifier mon compte </h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field is-5 column is-centered">
+    <%= f.label :adresse_email %><br />
+    <%= f.email_field :email, autofocus: true, class: "input" %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field is-5 column is-centered">
+    <%= f.label :password %> <i>(Laisser vide si vous ne voulez pas changer)</i><br />
+    <%= f.password_field :password, autocomplete: "off", class: "input" %>
+  </div>
+
+  <div class="field is-5 column is-centered">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "input" %>
+  </div>
+
+  <div class="field is-5 column is-centered">
+    <%= f.label :current_password %> <i>(Pour confirmer vos changements)</i><br />
+    <%= f.password_field :current_password, autocomplete: "off", class: "input" %>
+  </div>
+
+  <div class="actions columns is-centered space_top-small2">
+    <%= f.submit "Mettre à jour", class: "button is-warning" %>
+  </div>
+<% end %>
+
+</div>
+
+<div class="corner_left">
+  <%= link_to "Retour", :back, :class => 'button is-dark' %>
+</div>

@@ -1,0 +1,28 @@
+<div class="space_top">
+	<h2>Nouvelle épreuve</h2>
+
+<%= form_for @epreuve do |f| %>
+	<div class="field is-4 column is-centered space_top-small2">
+		<span class="select">
+			<%= f.collection_select :matiere_id, Matiere.where(user_id: current_user.id) , :id, :titre, include_blank: 'Sélectionnez une matière', class: "select" %>
+		</span>
+	</div>
+
+	<div class="field is-2 column is-centered">
+		<%= f.label :Date_epreuve, "Date de l'épreuve" %>
+		<%= f.date_field :date, class: "input"  %>
+	</div>
+
+	<div class="field is-3 column is-centered">
+		<%= f.text_field :titre, placeholder: "Epreuve", class: "input" %>
+	</div>
+
+	<div class="actions columns is-centered space_top-small2">
+		<%= f.submit "Enregistrer", class: "button is-warning is-medium" %>
+	</div>
+
+<% end %>
+	<div class="corner_left">
+		<%= link_to "Accueil", root_path, :class => 'button is-dark' %>
+	</div>
+</div>

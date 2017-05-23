@@ -1,0 +1,57 @@
+<div class="space_top-small2">
+  <h2>S'inscrire</h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+    <div class="columns">
+      <div class="field is-3 column is-centered">
+        <%= f.text_field :nom, autofocus: true, placeholder: "Nom", class: "input" %>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="field is-3 column is-centered">
+        <%= f.text_field :prenom, placeholder: "Prénom", class: "input" %>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="field is-3 column is-centered">
+        <%= f.email_field :email, placeholder: "Email", class: "input" %>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="field is-3 column is-centered">
+        <%= f.password_field :password, autocomplete: "off", placeholder: "Mot de passe (6 caractères min)", class: "input" %>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="field is-3 column is-centered">
+        <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirmation du mot de passe", class: "input" %>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="field is-centered">
+        <%= f.radio_button :type, "Enseignant" %>
+        <%= f.label :type, "Enseignant" %>
+      </div>
+    </div>
+    <div class="columns">
+       <div class="field is-centered">
+        <%= f.radio_button :type, "Etudiant" %>
+        <%= f.label :type, "Etudiant" %>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="actions columns is-centered space_top-small2">
+        <%= f.submit "S'inscrire" , class: "button is-warning"%>
+      </div>
+    </div>
+
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>
