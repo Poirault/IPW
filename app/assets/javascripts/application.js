@@ -17,35 +17,35 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-/*
+
 
 $(document).ready(function() {
 
 	particlesJS("particles-js", {
 	  "particles": {
 	    "number": {
-	      "value": 208,
+	      "value": 100,
 	      "density": {
 	        "enable": true,
-	        "value_area": 1362.9002517356944
+	        "value_area": 1000
 	      }
 	    },
 	    "color": {
 	      "value": "#ffffff"
 	    },
 	    "shape": {
-	      "type": "circle",
+	      "type": "square",
 	      "stroke": {
 	        "width": 0,
-	        "color": "#000000"
+	        "color": "#ffffff"
 	      },
 	      "polygon": {
 	        "nb_sides": 5
 	      },
 	      "image": {
 	        "src": "img/github.svg",
-	        "width": 100,
-	        "height": 100
+	        "width": 25,
+	        "height": 25
 	      }
 	    },
 	    "opacity": {
@@ -53,7 +53,7 @@ $(document).ready(function() {
 	      "random": false,
 	      "anim": {
 	        "enable": false,
-	        "speed": 1.6241544246026902,
+	        "speed": 1,
 	        "opacity_min": 0.22738161944437663,
 	        "sync": false
 	      }
@@ -71,8 +71,8 @@ $(document).ready(function() {
 	    "line_linked": {
 	      "enable": true,
 	      "distance": 150,
-	      "color": "#ffffff",
-	      "opacity": 0.4,
+	      "color": "#000000",
+	      "opacity": 0.2,
 	      "width": 1
 	    },
 	    "move": {
@@ -176,4 +176,3 @@ $(document).ready(function() {
 		$('.overflow-y').css("overflow-y", "hidden");
 	}
 });
-*/

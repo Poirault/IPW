@@ -36,15 +36,10 @@
     <div class="columns">
       <div class="field is-centered">
         <%= f.radio_button :type, "Enseignant" %>
-        <%= f.label :type, "Enseignant" %>
+        <%= f.label :type, "Je certifie être un enseignant" %>
       </div>
     </div>
-    <div class="columns">
-       <div class="field is-centered">
-        <%= f.radio_button :type, "Etudiant" %>
-        <%= f.label :type, "Etudiant" %>
-      </div>
-    </div>
+    
     <div class="columns">
       <div class="actions columns is-centered space_top-small2">
         <%= f.submit "S'inscrire" , class: "button is-warning"%>
